@@ -1,0 +1,427 @@
+/*
+CSS Parallax Scrolling Demo
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+*/
+
+
+/* Fontface */
+
+
+a {
+
+text-decoration: none;
+color: #c7272c;
+
+}
+
+a:hover {
+
+text-decoration: underline;
+
+}
+
+@font-face {
+    font-family: 'MisoLight';
+    src: url('miso-light-webfont.eot');
+    src: url('miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('miso-light-webfont.woff') format('woff'),
+         url('miso-light-webfont.ttf') format('truetype'),
+         url('miso-light-webfont.svg#MisoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MisoRegular';
+    src: url('miso-webfont.eot');
+    src: url('miso-webfont.eot?#iefix') format('embedded-opentype'),
+         url('miso-webfont.woff') format('woff'),
+         url('miso-webfont.ttf') format('truetype'),
+         url('miso-webfont.svg#MisoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MisoBold';
+    src: url('type/miso-bold-webfont.eot');
+    src: url('type/miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('type/miso-bold-webfont.woff') format('woff'),
+         url('type/miso-bold-webfont.ttf') format('truetype'),
+         url('type/miso-bold-webfont.svg#MisoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+	color: #000;
+}
+
+p{
+	margin: 0 0 20px 0;	
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+	
+}
+
+img{
+	border: 0;
+}
+
+
+h1, #pixels{
+	font-family:"Museo 900", Verdana, serif;
+	font-size-adjust:0.40;
+	font-weight:700;
+	font-style:normal;
+}
+
+h1.teal{
+	text-transform: uppercase;
+	color: #c2282d;
+	font-family:"MisoBold", Verdana, serif;
+	font-size:60px;
+	margin-bottom: 15px;
+}
+
+h1.bigbig{
+	text-transform: uppercase;
+	color: #c7272c;
+	font-family:"MisoBold", Verdana, serif;
+	font-size:110px;
+	margin-bottom: 10px;
+}
+
+h2{
+	font-family:"MisoBold", Verdana, sans-serif;
+	font-size:14px;
+
+	font-style:normal;
+}
+
+h3{
+	font-family:"MisoBold", Verdana, sans-serif;
+	font-size:35px;
+	font-weight:500;
+	font-style:normal;
+	line-height:10px;
+	padding-bottom: 1px;
+}
+
+
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 20px;
+}
+
+
+
+.about-title h1{
+	position: absolute;
+	margin-top: 160px;
+	color: #fff;
+	background-color:rgba(153,153,153,0.8);
+	padding: 15px 10px;
+	height:110px;
+	
+		
+
+}
+
+.about-text{
+
+position: absolute;
+margin-top: 160px;
+margin-left: 400px;
+width: 400px;
+height:500px;
+color: #fff;
+background-color:#d45156;
+
+
+
+}
+
+.about-text p{
+font-size: 17.2px;
+padding: 20px 20px 0px 20px;
+
+
+
+
+}
+
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0;
+	text-align: center;
+}
+
+.positions{
+position: absolute;
+top:210px;
+font-family:'MisoBold';
+font-size: 2.1em;
+height:300px;
+
+}
+
+.positions a{
+font-family:'MisoBold';
+color:#ccc;
+line-height: 50px;
+font-size: 1.1em;
+text-decoration: none;
+
+}
+
+.positions a:hover{
+font-family:'MisoBold';
+font-size: 1.1em;
+border-bottom: 3px Solid #c2282d;
+
+}
+
+
+#nav{
+	list-style: none;
+	position: fixed;
+	right: 20px;
+}
+
+#nav li{
+	margin: 0 0 15px 0;
+	font-family: 'MisoBold';
+	color: #666;
+	text-align:right;
+}
+
+#nav li a{
+	margin: 0 0 15px 0;
+	font-family: 'MisoBold';
+	color: #666;
+	text-decoration: none;
+	font-size:22px;
+	
+	
+}
+
+#nav li a:hover{
+	margin: 0 0 15px 0;
+	font-family: 'MisoBold';
+	color: #c7272c;
+	text-decoration: none;
+	font-size:22px;
+	
+	
+}
+
+#header, #home, #about{
+	width: 100%;
+}
+
+#header{
+	background: black;
+	height: 130px;
+
+}
+
+#home{
+
+	background: #fff;
+	color: white;
+	height: 700px;
+	padding: 110px 0 0 0;
+}
+
+#about{
+
+
+	color: white;
+	height: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	background: gray url(images/about.jpg) 50% 0 no-repeat fixed;
+}
+
+#m { position: fixed; _position: absolute; }
+
+
+#projects{
+	color: white;
+	height: 850px;
+	padding: 0px 0 0 0;	
+}
+
+
+#team{
+	background: #fff;
+	height: 700px;
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+}
+
+
+#contact{
+	background-position: 50% 0, 50% 0, 50% 0, 50% 0;
+	background-color: #fff;
+	
+	background-attachment: fixed;
+	background-repeat: repeat, repeat, repeat ,no-repeat;
+	color: white;
+	height: 800px;
+	padding: 40px 0 0 0;
+}
+
+
+.story {
+	margin: 0 auto;
+	min-width: 980px;
+	width: 600px;
+	color: #999;
+}
+
+.story-white {
+	margin: 0 auto;
+	min-width: 980px;
+	width: 600px;
+	color: #fff;
+}
+
+.story .bio {
+	margin: 0 auto;
+	margin-top:90px;
+	min-width: 980px;
+	width: 980px;
+	color: #999;
+	z-index: 200;
+}
+
+
+.story .float-left, .story .float-right{
+	padding: 10px 0 0 0;
+	position: relative;
+	width: 600px;
+	height:200px;
+}
+
+.story .float-left-inner{
+	padding: 50px 0 0 120px;
+	position: absolute;
+	width: 350px;	
+}
+
+.bio-left{
+padding-top:60px;
+position:absolute;
+width:80px;
+height:150px;
+margin-left: 0px;
+}
+
+.bio-right{
+padding-top:10px;
+margin-left: 100px;
+position:relative;
+width:100px;
+height:150px;
+}
+
+.graybox{
+color: #fff;
+font-family: 'MisoBold';
+font-size: 20px;
+padding: 30px;
+position: absolute;
+margin-top: 118px;
+line-height: 25px;
+margin-left: 270px;
+width: 500px;
+height: 40px;
+background: #ccc;
+}
+
+
+.teamtag{
+margin-top: 100px;
+padding-left: 50px;
+padding-top: 5px;
+background-color: #c7272c;
+float: left;
+height: 30px;
+font-family: 'MisoBold';
+color: #fff;
+font-size: 30px;
+text-transform: uppercase;
+
+}
+
+/* Project Descriptions */
+
+#bnym, #capitalg,#jamespatterson,#alpine {
+    display: none;
+	height:auto;
+	position: absolute;
+	top:210px;
+	margin-left: 300px;
+	width:600px;
+}
+
+.screenshot_left{
+float:left;
+width:200px;
+}
+
+.app_description{
+float:left;
+width:450px;
+margin-left:50px;
+}
+
+
+/* End Project Descriptions */
+
+.clear{clear:both}
+
+
+/* The Team! */
+
+#isaac, #felipe, #matt {
+position: relative;
+    display: none;
+	height:auto;
+	margin-top: -125px;
+	padding:0px;
+	margin-left: 350px;
+	width:450px;
+}
+
+
+/* End of The Team */
